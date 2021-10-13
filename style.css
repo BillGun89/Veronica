@@ -1,0 +1,153 @@
+body{
+ 
+  height: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.route{
+  max-width: 1400px;
+  width: 100vh;
+}
+
+.container{
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 300px;
+  justify-content: center;
+  
+}   
+
+.image-gallery{
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 1.5rem;
+  grid-template-areas: 
+  'img-9 img-9 img-3 img-12'
+  'img-9 img-9 img-7 img-7'
+  'img-1 img-10 img-7 img-7'
+  'img-1 img-8 img-11 img-4'
+  'img-5 img-6 img-2 img-4';
+}
+
+.image-gallery a{
+  width: 100%;
+  height: 25rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 25px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+}
+
+
+.image-gallery a::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(20, 20, 20, 0.8);
+  opacity: 0;
+  transition: opacity .5s;
+  border-radius: 25px;
+}
+
+.image-gallery a:hover i,
+.image-gallery a:hover::before{
+  opacity: 60%;
+}
+
+.img-1{
+  grid-area: img-1;
+  min-height: 51.5rem;
+  background-image: url("img1.jpg");
+
+}
+
+.img-2{
+  grid-area: img-2;
+  background-image: url("img2.jpg");
+}
+
+.img-3{
+  grid-area: img-3;
+  background-image: url("img3.jpg");
+}
+.img-4{
+  grid-area: img-4;
+  min-height: 51.5rem;
+  background-image: url("img4.jpg");
+}
+.img-5{
+  grid-area: img-5;
+  background-image: url("img5.jpg");
+}
+.img-6{
+  grid-area: img-6;
+  background-image: url("img6.jpg");
+}
+.img-7{
+  grid-area: img-7;
+  min-height: 51.5rem;
+  background-image: url("img7.jpg");
+}
+.img-8{
+  grid-area: img-8;
+  background-image: url("img8.jpg");
+}
+.img-9{
+  grid-area: img-9;
+  min-height: 51.5rem;
+  background-image: url("img9.jpg");
+}
+.img-10{
+  grid-area: img-10;
+  background-image: url("img10.jpg");
+}
+.img-11{
+  grid-area: img-11;
+  background-image: url("img11.jpg");
+}
+.img-12{
+  grid-area: img-12;
+  background-image: url("img12.jpg");
+}
+
+
+
+
+@media screen and (max-width: 600px){
+  .image-gallery{
+      grid-template-areas: 
+  'img-9 img-9 img-9 img-9'
+  'img-9 img-9 img-9 img-9'
+  'img-1 img-1 img-10 img-10'
+  'img-1 img-1 img-10 img-10'
+  'img-7 img-7 img-8 img-8'
+  'img-11 img-11 img-12 img-12'
+  'img-5 img-5 img-6 img-6'
+  'img-2 img-2 img-4 img-4';
+  }
+  .image-gallery a {
+      height: 25rem;
+      width: 20rem;
+  }
+}
+
+.welcome{
+  font-size: 50px;
+  font-family: 'Poppins', sans-serif;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  margin-top: 300px;
+  margin-bottom: 100px;
+}

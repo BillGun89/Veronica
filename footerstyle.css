@@ -1,0 +1,102 @@
+
+#footer{
+
+    background-color: rgb(255, 255, 255);  
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    height: 180px;
+    bottom: 0;
+    border-color: grey;
+    border-style: solid;
+    border-bottom: hidden;
+    border-left: hidden;
+    border-right: hidden;
+    
+   
+}
+
+
+#foot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  #foot li {
+    list-style: none;
+  }
+  
+  #foot li a {
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 80px;
+    font-size: 35px;
+    margin: 0 10px;
+    display: block;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #fff;
+    z-index: 1;
+  }
+  
+  #foot li a .icon {
+    position: relative;
+    color: #262626;
+    transition: .5s;
+    z-index: 3;
+  }
+  
+  #foot li a:hover .icon {
+    color: #fff;
+    transform: rotateY(360deg);
+  }
+  
+  #foot li a:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f00;
+    transition: .5s;
+    z-index: 2;
+  }
+  
+  #foot li a:hover:before {
+    top: 0;
+  }
+  
+  #foot li:nth-child(1) a:before{
+    background: #3b5999;
+  }
+  
+  #foot li:nth-child(2) a:before{
+    background: #ee55c0;
+  }
+  
+  #foot li:nth-child(3) a:before {
+    background: #f80c0c;
+  }
+  
+  #foot li:nth-child(4) a:before {
+    background: #dd4b39;
+  }
+ 
+  #text{
+    text-align: center;
+  }
+  
+  .copytext{
+   
+    text-align: center;
+    padding-top: 20px;
+  }
+
+ 

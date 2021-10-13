@@ -1,0 +1,249 @@
+
+
+header{
+    display:grid;
+    grid-auto-columns: 1fr;
+    grid-auto-flow: column;
+    grid-template-columns: 35% 65%;
+    background-color: white;
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    height: 200px;
+    top: 0;
+    border-style: solid;
+    border-top: hidden;
+    border-left: hidden;
+    border-right: hidden;
+    border-color: grey;
+}
+header div{
+    grid-row: 1 ;
+    text-align: center;
+     
+}
+#test{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+}
+
+.logo img{
+    max-width:250px;
+    margin:20px 0;
+    position: relative; top: 5px;
+}
+
+#test a{
+   float: left;
+   display: block;
+   font-size: 20px;
+   margin-left: 50px;
+   font-family: 'Coming Soon', cursive;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; top: 20px; right: 50px;
+    margin: 20px auto;
+    width: 300px;
+    height: 130px;
+    background: white;
+    border-radius: 75px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    transition: 1s box-shadow;
+    
+  }
+  
+  .logo:hover {
+    box-shadow: 0 5px 35px 0px rgba(0,0,0,.1);
+  }
+  
+  .logo:hover::before, .logo:hover::after {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 250px;
+    height: 130px;
+    background: #FDA8CF;
+    border-radius: 75px;
+    z-index: -1;
+    animation: 1s clockwise infinite;
+  }
+  
+  .logo:hover:after {
+    background: #F3CE5E;
+    animation: 2s counterclockwise infinite;
+  }
+  
+  @keyframes clockwise {
+    0% {
+      top: -5px;
+      left: 0;
+    }
+    12% {
+      top: -2px;
+      left: 2px;
+    }
+    25% {
+      top: 0;
+      left: 5px;    
+    }
+    37% {
+      top: 2px;
+      left: 2px;
+    }
+    50% {
+      top: 5px;
+      left: 0;    
+    }
+    62% {
+      top: 2px;
+      left: -2px;
+    }
+    75% {
+      top: 0;
+      left: -5px;
+    }
+    87% {
+      top: -2px;
+      left: -2px;
+    }
+    100% {
+      top: -5px;
+      left: 0;    
+    }
+  }
+  
+  @keyframes counterclockwise {
+    0% {
+      top: -5px;
+      right: 0;
+    }
+    12% {
+      top: -2px;
+      right: 2px;
+    }
+    25% {
+      top: 0;
+      right: 5px;    
+    }
+    37% {
+      top: 2px;
+      right: 2px;
+    }
+    50% {
+      top: 5px;
+      right: 0;    
+    }
+    62% {
+      top: 2px;
+      right: -2px;
+    }
+    75% {
+      top: 0;
+      right: -5px;
+    }
+    87% {
+      top: -2px;
+      right: -2px;
+    }
+    100% {
+      top: -5px;
+      right: 0;    
+    }
+  }
+
+  nav{
+    float: none; 
+    clear: both;
+    background: rgb(255, 255, 255);
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  nav li{
+    display: inline;
+    float: left; 
+    width: 180px;
+  }
+  
+  nav li a{
+    display: block; 
+    width: 100%; 
+    padding: 15px; 
+    border-left: 5px solid; 
+    position: relative; 
+    z-index: 2;
+    text-decoration: none;
+    color: #444;
+    box-sizing: border-box;  
+    -moz-box-sizing: border-box;  
+    -webkit-box-sizing: border-box; 
+  }
+    
+  nav li a:hover{ border-bottom: 0px; color: #fff;}
+  nav li:first-child a{ border-left: 10px solid #5dbeff; }
+  nav li:nth-child(2) a{ border-left: 10px solid #f6d798; }
+  nav li:nth-child(3) a{ border-left: 10px solid #e2bcfb; }
+  nav li:nth-child(4) a{ border-left: 10px solid #f06cf0; }
+  nav li:last-child a{ border-left: 10px solid #8efbe6; }
+  
+  nav li a:after { 
+    content: "";
+    height: 100%; 
+    left: 0; 
+    top: 0; 
+    width: 0px;  
+    position: absolute; 
+    transition: all 0.3s ease 0s; 
+    -webkit-transition: all 0.3s ease 0s; 
+    z-index: -1;
+  }
+  
+  nav li a:hover:after{ width: 100%; }
+  nav li:first-child a:after{ background: #5dbeff; }
+  nav li:nth-child(2) a:after{ background: #f6d798; }
+  nav li:nth-child(3) a:after{ background: #e2bcfb; }
+  nav li:nth-child(4) a::after{ background:  #f06cf0; }
+  nav li:last-child a:after{ background: #8efbe6; }
+  
+  
+  
+  @font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 100;
+    src: local('Lato Hairline'), local('Lato-Hairline'), url(http://themes.googleusercontent.com/static/fonts/lato/v6/boeCNmOCCh-EWFLSfVffDg.woff) format('woff');
+  }
+  @font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Lato Light'), local('Lato-Light'), url(http://themes.googleusercontent.com/static/fonts/lato/v6/KT3KS9Aol4WfR6Vas8kNcg.woff) format('woff');
+  }
+  @font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Lato Regular'), local('Lato-Regular'), url(http://themes.googleusercontent.com/static/fonts/lato/v6/9k-RPmcnxYEPm8CNFsH2gg.woff) format('woff');
+  }
+  @font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Lato Bold'), local('Lato-Bold'), url(http://themes.googleusercontent.com/static/fonts/lato/v6/wkfQbvfT_02e2IWO3yYueQ.woff) format('woff');
+  }
+
+ 
